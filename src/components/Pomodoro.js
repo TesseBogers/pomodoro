@@ -22,7 +22,7 @@ function Pomodoro() {
         <>
             <header>
                 <h1>Pomodoro</h1>
-                {startFunction === true ? <Timer workTimeAmount={workTime} breakTimeAmount={relaxTime}/> : null}
+                {startFunction === true ? <Timer workAmount={workTime} relaxAmount={relaxTime}/> : null}
                 <button
                     className='submit-button'
                     type="button"

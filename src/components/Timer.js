@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react"
 import Counter from "./Counter";
 
-function Timer({workTimeAmount, breakTimeAmount}) {
+function Timer({workAmount, relaxAmount}) {
 
-    const [minutes, setMinutes] = useState(workTimeAmount)
+    const [minutes, setMinutes] = useState(workAmount)
     const [seconds, setSeconds] = useState(0)
-    const [pauze, setPauze] = useState(breakTimeAmount)
     const [displayMessage, setDisplayMessage] = useState(false)
     const [clicked, toggleClicked] = useState(false)
     const [stopCounter, setStopCounter] = useState(false)
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -18,12 +18,11 @@ function Timer({workTimeAmount, breakTimeAmount}) {
                     setSeconds(59)
                     setMinutes(minutes - 1)
                 } else {
-                    const minutes = displayMessage ? workTimeAmount - 1 : breakTimeAmount - 1
+                    const minutes = displayMessage ? workAmount - 1 : relaxAmount - 1
                     const seconds = 59
 
                     setSeconds(seconds)
                     setMinutes(minutes)
-                    setPauze(breakTimeAmount)
                     setDisplayMessage(!displayMessage)
                 }
             } else {
