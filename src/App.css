@@ -16,7 +16,6 @@ header {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  color: white;
 }
 .pomodoro {
   position: relative;
@@ -26,7 +25,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #191970	;
   font-size: xxx-large;
 }
 
@@ -41,7 +40,8 @@ header button {
   border: none;
   padding: 24px 48px;
   font-size: 20px;
-  color: white;
+  color: #191970;
+  text-decoration: underline;
 }
 
 header button:hover {
@@ -51,7 +51,7 @@ header button:hover {
 header h1 {
   font-size: 72px;
   padding: 48px 0;
-  color: white;
+  color: #191970	;
 }
 
 footer {
@@ -59,8 +59,7 @@ footer {
   justify-content: flex-start;
   padding: 100px;
   height: 400px;
-  color: white;
-  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background: url('./assets/stone.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -68,7 +67,7 @@ footer {
   background-color: transparent;
   font-weight: 200;
   font-size: 50px;
-  color: white;
+  color: #191970	;
   padding-left: 140px;
   padding-bottom: 80px;
 }
@@ -78,7 +77,7 @@ footer {
   font-size: 30px;
   border: none;
   padding: 24px 48px;
-  color: white;
+  color: #191970	;
 }
 
 main {
@@ -86,6 +85,6 @@ main {
 }
 
 header {
-  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background: url('./assets/stone.jpg') no-repeat center center fixed;
   background-size: cover;
 }
