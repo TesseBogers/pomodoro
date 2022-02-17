@@ -62,7 +62,7 @@ function Timer({workAmount, relaxAmount}) {
             }
 
             <button
-                className='header-button'
+                className='submit-button'
                 type="button"
                 onClick={handleClick}
             >

@@ -20,8 +20,8 @@ function Pomodoro() {
 
     return (
         <>
-            <header>
-                <h1>Pomodoro</h1>
+            <div className="app">
+                <h1 className="title">Pomodoro</h1>
                 {startFunction === true ? <Timer workAmount={workTime} relaxAmount={relaxTime}/> : null}
                 <button
                     className='submit-button'
@@ -31,12 +31,11 @@ function Pomodoro() {
                 </button>
 
 
-                <div className="container">
+                <div>
                     <main>
                         <div>
                     {startFunction === false ?
                         <>
-
                             <div>
                                 <div className="timer-amount">Edit worktime: {workTime} minutes</div>
                                 <TimeButtonUp setTime={setWorkTime} time={workTime}/>
@@ -51,7 +50,7 @@ function Pomodoro() {
                         </div>
                     </main>
                 </div>
-            </header>
+            </div>
         </>
     );
 }
