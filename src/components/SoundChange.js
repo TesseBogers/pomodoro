@@ -4,7 +4,7 @@ import glassSound from '../assets/glass.mp3';
 
 function SoundChange({zeroMinutes, zeroSeconds }) {
 
-    const [sound, toggleSound] = useState(false)
+    const [sound, toggleSound] = useState(true)
 
     const audio = new Audio(glassSound)
     if (sound === true) {
@@ -14,10 +14,10 @@ function SoundChange({zeroMinutes, zeroSeconds }) {
     }
 
     function handleSound() {
-        if (sound === false) {
-            toggleSound(true);
-        } else {
+        if (sound === true) {
             toggleSound(false);
+        } else {
+            toggleSound(true);
         }
     }
 

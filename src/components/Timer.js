@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Counter from './Counter';
 import SoundChange from './SoundChange';
+import CountDownTimer from './CountDownTimer';
 
 
 function Timer({workAmount, relaxAmount}) {
@@ -20,7 +20,7 @@ function Timer({workAmount, relaxAmount}) {
                             setSeconds(59)
                             setMinutes(minutes - 1)
                         } else {
-                            const minutes = displayMessage ? workAmount - 1 : relaxAmount - 1
+                            const minutes = displayMessage ? workAmount - 1 : relaxAmount -1
                             const seconds = 59
 
                             setSeconds(seconds)
@@ -53,15 +53,28 @@ function Timer({workAmount, relaxAmount}) {
 
     return (
         <div className="pomodoro">
-            {displayMessage === true ?
-                <div>Time for a break:</div>
-                :
+
+            <SoundChange zeroMinutes={minutes} zeroSeconds={seconds}/>
+
+            {displayMessage === false ?
                 <div>Time to focus:</div>
-            }
-            {displayMessage === true ?
-                <Counter minute={timerMinutes} second={timerSeconds}/>
                 :
-                <Counter minute={timerMinutes} second={timerSeconds}/>
+                <div>Time for a break:</div>
+
+            }
+
+            {displayMessage === false ?
+                <CountDownTimer durationMinutes={workAmount}
+                                clicked={clicked}
+                                minute={timerMinutes}
+                                second={timerSeconds}
+                />
+                :
+                <CountDownTimer durationMinutes={relaxAmount}
+                                clicked={clicked}
+                                minute={timerMinutes}
+                                second={timerSeconds}
+                />
             }
 
             <button
@@ -70,9 +83,8 @@ function Timer({workAmount, relaxAmount}) {
                 onClick={handleClick}
             >
                 {clicked === false ? "Break" : "Start"}
-            </button>
 
-            <SoundChange zeroMinutes={minutes} zeroSeconds={seconds}/>
+            </button>
 
         </div>
     );

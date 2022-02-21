@@ -61,7 +61,7 @@ body {
   border: none;
   padding: 24px 48px;
   color: #191970;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   font-weight: 200;
   font-size: 50px;
   padding-left: 140px;
@@ -78,4 +78,10 @@ body {
 
 main {
   padding: 100px;
+}
+
+.circles {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
 }
