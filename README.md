@@ -19,3 +19,6 @@ npm start
 
 -   De timer kan op pauze gezet worden.
 
+-   Wanneer werk-tijd overgaat in pauze-tijd en vice versa geeft de app dit aan de hand van een 
+    geluid aan, het geluid kan ON & OFF.
+
