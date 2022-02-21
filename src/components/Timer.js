@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react"
-import Counter from "./Counter";
+import React, { useState, useEffect } from 'react'
+import Counter from './Counter';
+import SoundChange from './SoundChange';
+
 
 function Timer({workAmount, relaxAmount}) {
 
@@ -11,28 +13,30 @@ function Timer({workAmount, relaxAmount}) {
 
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (!stopCounter){
-            if (seconds === 0) {
-                if (minutes !== 0) {
-                    setSeconds(59)
-                    setMinutes(minutes - 1)
-                } else {
-                    const minutes = displayMessage ? workAmount - 1 : relaxAmount - 1
-                    const seconds = 59
+            const interval = setInterval(() => {
+                if (!stopCounter) {
+                    if (seconds === 0) {
+                        if (minutes !== 0) {
+                            setSeconds(59)
+                            setMinutes(minutes - 1)
+                        } else {
+                            const minutes = displayMessage ? workAmount - 1 : relaxAmount - 1
+                            const seconds = 59
 
-                    setSeconds(seconds)
-                    setMinutes(minutes)
-                    setDisplayMessage(!displayMessage)
+                            setSeconds(seconds)
+                            setMinutes(minutes)
+                            setDisplayMessage(!displayMessage)
+                        }
+                    } else {
+                        setSeconds(seconds - 1)
+                    }
                 }
-            } else {
-                setSeconds(seconds - 1)
-            }}
-        }, 1000)
-        return ()=> {
-            clearInterval(interval)
-                };
-    });
+            }, 1000)
+            return () => {
+                clearInterval(interval)
+            };
+        }
+    );
 
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds
@@ -40,8 +44,8 @@ function Timer({workAmount, relaxAmount}) {
 
     function handleClick() {
         if (clicked === false) {
-        toggleClicked(true); }
-        else {
+            toggleClicked(true);
+        } else {
             toggleClicked(false);
         }
         setStopCounter(!stopCounter);
@@ -54,7 +58,6 @@ function Timer({workAmount, relaxAmount}) {
                 :
                 <div>Time to focus:</div>
             }
-
             {displayMessage === true ?
                 <Counter minute={timerMinutes} second={timerSeconds}/>
                 :
@@ -66,8 +69,11 @@ function Timer({workAmount, relaxAmount}) {
                 type="button"
                 onClick={handleClick}
             >
-                {clicked === false ?  "Pauze" : "Start"}
+                {clicked === false ? "Break" : "Start"}
             </button>
+
+            <SoundChange zeroMinutes={minutes} zeroSeconds={seconds}/>
+
         </div>
     );
 }

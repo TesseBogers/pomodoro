@@ -1,7 +1,7 @@
 import '../App.css';
 import Timer from './Timer';
-import TimeButtonUp from "./TimeButtonUp";
-import TimeButtonDown from "./TimeButtonDown";
+import TimeButtonUp from './TimeButtonUp';
+import TimeButtonDown from './TimeButtonDown';
 import React, { useState } from 'react';
 
 function Pomodoro() {
@@ -29,6 +29,7 @@ function Pomodoro() {
                     onClick={handleClick}>
                     {startFunction === false ?  "START " : "RESET" }
                 </button>
+
 
 
                 <div>
