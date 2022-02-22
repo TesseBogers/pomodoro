@@ -2,6 +2,8 @@ import '../App.css';
 import Timer from './Timer';
 import TimeButtonUp from './TimeButtonUp';
 import TimeButtonDown from './TimeButtonDown';
+import settings from '../assets/settings.png';
+import start from '../assets/start.png';
 import React, { useState } from 'react';
 
 function Pomodoro() {
@@ -21,19 +23,25 @@ function Pomodoro() {
     return (
         <>
             <div className="app">
+
                 <h1 className="title">Pomodoro</h1>
-                {startFunction === true ? <Timer workAmount={workTime} relaxAmount={relaxTime}/> : null}
+                {startFunction === true ?
+                    <Timer workAmount={workTime} relaxAmount={relaxTime}/>
+                    :
+                    null
+                }
                 <button
-                    className='submit-button'
+                    className='setting-button'
                     type="button"
                     onClick={handleClick}>
-                    {startFunction === false ?  "START " : "RESET" }
+                    {startFunction === false ?
+                        <img className='setting-button' src={start} alt="start"/>
+                        :
+                        <img className='setting-button' src={settings} alt="Settings"/>
+                    }
                 </button>
 
-
-
                 <div>
-                    <main>
                         <div>
                     {startFunction === false ?
                         <>
@@ -49,7 +57,6 @@ function Pomodoro() {
                             </div>
                         </> : null }
                         </div>
-                    </main>
                 </div>
             </div>
         </>

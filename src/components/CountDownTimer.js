@@ -16,9 +16,9 @@ function CountDownTimer({durationMinutes, clicked, minute, second }) {
                     <CountdownCircleTimer
                         isPlaying={clicked === false}
                         duration={durationMinutes * 60}
-                        colors={["#191970", "#A30000", "#A30000"]}
+                        colors={["#000000", "#A30000", "#A30000"]}
                         colorsTime={[10, 6, 0]}
-                        onComplete={() => ({shouldRepeat: true, delay: 0})}
+                        onComplete={() => ({shouldRepeat: true, delay: 1})}
                         size={320}
                     >
                         {time}

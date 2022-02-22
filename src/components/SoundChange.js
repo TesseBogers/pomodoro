@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import glassSound from '../assets/glass.mp3';
+import soundOn from '../assets/sound_on.png';
+import soundOff from '../assets/sound_off.png';
 
 
 function SoundChange({zeroMinutes, zeroSeconds }) {
@@ -22,12 +24,14 @@ function SoundChange({zeroMinutes, zeroSeconds }) {
     }
 
     return(
-
         <button
-            className='submit-button'
+            className='sound-button'
             onClick={handleSound}
         >
-            {sound === false ? "SOUND OFF" : "SOUND ON"}
+            {sound === false ?
+                <img className='sound-button' src={soundOff} alt="Sound off"/>
+                :
+                <img className='sound-button' src={soundOn} alt="Sound on"/>}
         </button>
     );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import minus from '../assets/minus_icon.png';
 
 function TimeButtonDown({time, setTime}) {
     return (
@@ -7,7 +8,7 @@ function TimeButtonDown({time, setTime}) {
                 onClick={() => setTime(time - 1 )}
                 disabled={time === 1}
         >
-            <p>-</p>
+            <img className='change-button' src={minus} alt='minus-sign'/>
         </button>
     );
 }
