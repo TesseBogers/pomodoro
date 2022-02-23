@@ -3,6 +3,7 @@ import minus from '../assets/minus_icon.png';
 
 function TimeButtonDown({time, setTime}) {
     return (
+        <div className='single-button'>
         <button className="change-button"
                 type="button"
                 onClick={() => setTime(time - 1 )}
@@ -10,6 +11,7 @@ function TimeButtonDown({time, setTime}) {
         >
             <img className='change-button' src={minus} alt='minus-sign'/>
         </button>
+        </div>
     );
 }
 export default TimeButtonDown;

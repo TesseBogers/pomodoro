@@ -4,6 +4,7 @@ import plus from '../assets/plus_icon.png';
 function TimeButtonUp({time, setTime}) {
 
     return(
+        <div className='single-button'>
         <button
             className='change-button'
             type="button"
@@ -12,6 +13,7 @@ function TimeButtonUp({time, setTime}) {
         >
             <img className='change-button' src={plus} alt='plus-sign'/>
         </button>
+        </div>
     );
 }
 export default TimeButtonUp;

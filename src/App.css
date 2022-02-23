@@ -63,7 +63,12 @@ body {
   width: 70px;
 }
 
+.single-button {
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 195px;
 
+}
 .change-button:hover {
   cursor: pointer;
 }
