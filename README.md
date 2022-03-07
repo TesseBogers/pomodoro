@@ -22,4 +22,4 @@ npm start
 -   Wanneer werk-tijd overgaat in pauze-tijd en vice versa geeft de app dit aan de hand van een 
     geluid aan, het geluid kan ON & OFF.
 
-![alt imageApp](pomodoro.png) ![alt imageApp](pomodoro2.png)
+![alt imageApp](src/assets/pomodoro.png) ![alt imageApp](src/assets/pomodoro2.png)
