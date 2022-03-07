@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import SoundChange from './SoundChange';
 import CountDownTimer from './CountDownTimer';
-import play from '../assets/start.png';
-import pauze from '../assets/pauze.png';
 
 
 function Timer({workAmount, relaxAmount}) {
@@ -82,14 +80,12 @@ function Timer({workAmount, relaxAmount}) {
                 onClick={handleClick}
             >
                 {clicked === false ?
-                    <img className='sound-button' src={pauze} alt="break"/>
+                    <p>BREAK</p>
                     :
-                    <img className='sound-button' src={play} alt="play"/>
+                    <p>START</p>
                 }
             </button>
             <SoundChange zeroMinutes={minutes} zeroSeconds={seconds}/>
-
-
 
         </div>
     );

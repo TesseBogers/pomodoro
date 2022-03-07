@@ -15,8 +15,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./assets/gold.jpg');
-  background-size: cover;
 }
 
 .pomodoro {
@@ -26,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: gray;
   font-size: xxx-large;
 }
 
@@ -41,7 +39,7 @@ body {
   border: none;
   padding: 24px 20px;
   font-size: 20px;
-  color: black;
+  color: gray;
   text-decoration: underline;
 }
 
@@ -52,7 +50,7 @@ body {
 .title {
   font-size: 72px;
   padding: 48px 0;
-  color: black;
+  color: #ffa500;
 }
 
 .change-button {
@@ -60,30 +58,35 @@ body {
   justify-content: center;
   position: center;
   border: none;
-  width: 70px;
+  width: 50px;
 }
 
 .single-button {
   justify-content: center;
   flex-direction: column;
   padding-left: 195px;
-
 }
+
 .change-button:hover {
   cursor: pointer;
 }
 
 .sound-button {
-  background: transparent;
+  background-color: transparent;
+  font-weight: 600;
   border: none;
-  width: 50px;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: gray;
+  text-decoration: underline;
 }
 
 .timer-amount {
   font-weight: 600;
   font-size: 30px;
   border: none;
-  padding: 24px 48px;
+  padding: 24px 30px;
+  color: gray;
 }
 
 .sound-button:hover {
@@ -91,10 +94,13 @@ body {
 }
 
 .setting-button {
-  background: transparent;
+  background-color: transparent;
+  font-weight: 600;
   border: none;
-  width: 50px;
-  padding: 20px 46px 20px 0px;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: grey;
+  text-decoration: underline;
 }
 
 .setting-button:hover {
